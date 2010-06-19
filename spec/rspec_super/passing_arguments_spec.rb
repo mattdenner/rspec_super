@@ -16,14 +16,10 @@ describe PassingArguments do
   end
 
   describe '#do_something_with_arguments' do
-    extend RSpecSuper
-
-    will_be_calling_super_on(:object) do
-      it 'calls do_something_else_with_arguments' do
-        super_should_be_called.with(1, 2).once
-        @object.should_receive(:do_something_else_with_arguments).with(1, 2).once
-        @object.do_something_with_arguments(1, 2)
-      end
+    it 'calls super with arguments' do
+      @object.should_receive_super_of(:do_something_with_arguments).with(1, 2).once
+      @object.should_receive(:do_something_else_with_arguments).with(1, 2).once
+      @object.do_something_with_arguments(1, 2)
     end
   end
 end
