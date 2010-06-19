@@ -7,6 +7,7 @@ Gem::Specification.new do |s|
   s.version = File.open('VERSION') { |file| file.read }
   
   s.add_development_dependency(%q<rspec>, [">= 1.3.0"])
+  s.add_development_dependency(%q<yard>, [">= 0.5.4"])
   s.add_dependency(%q<rspec>, [">= 1.3.0"])
 
   s.authors     = ["Matthew Denner"]
