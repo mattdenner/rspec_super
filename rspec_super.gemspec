@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.specification_version     = 3
 
   s.name    = %q{rspec_super}
-  s.version = File.open('VERSION') { |file| file.read }
+  s.version = '0.1.1'
   
   s.add_development_dependency(%q<rspec>, [">= 1.3.0"])
   s.add_development_dependency(%q<yard>, [">= 0.5.4"])
@@ -25,7 +25,6 @@ Gem::Specification.new do |s|
   s.files = [
      "README.markdown",
      "Rakefile",
-     "VERSION",
      "lib/rspec_super.rb",
      "spec/rspec_super/direct_derivative_spec.rb",
      "spec/rspec_super/non_direct_derivative_spec.rb",
